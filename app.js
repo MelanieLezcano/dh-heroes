@@ -1,16 +1,7 @@
-/* / -> Debe direccionar al recurso index.html. 
-●/babbage -> Debe direccionar al recurso babbage.html 
-●/berners-lee -> Debe direccionar al recurso berners-lee.html. 
-●/clarke -> Debe direccionar al recurso clarke.html. 
-●/hamilton -> Debe direccionar al recurso hamilton.html. 
-●/hopper -> Debe direccionar al recurso hopper.html. 
-●/lovelace -> Debe direccionar al recurso lovelace.html. 
-●/turing-> Debe direccionar al recurso turing.html. */
-
-
 const express = require('express')
 const app = express()
 const path = require('path')
+
 
 app.get('/',(req,res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
@@ -43,8 +34,6 @@ app.get('/lovelace',(req,res) => {
 app.get('/turing',(req,res) => {
     res.sendFile(path.join(__dirname, 'turing.html'));
 });
-
-
 
 
 app.listen(3030,()=> console.log("servidor levantado")
